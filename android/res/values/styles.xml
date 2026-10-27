@@ -1,0 +1,13 @@
+<resources>
+    <color name="screen_background">#05080F</color>
+    <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/screen_background</item>
+        <item name="android:colorAccent">#2DD4BF</item>
+        <item name="android:colorPrimary">#10263B</item>
+        <item name="android:colorPrimaryDark">#05080F</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

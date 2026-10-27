@@ -1,0 +1,53 @@
+# Runtime data, originals, converted media, fixtures and internal records
+/data/
+/server/data/
+/work/
+/outputs/
+/deploy-backups/
+/backups/
+/media/
+**/data/
+**/media/
+**/backups/
+**/deploy-backups/
+**/session.key
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+*.db-wal
+*.db-shm
+*.log
+
+# Local environment and credentials; only the reviewed example is public
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*.idsig
+
+# Build products and local dependencies
+/android/build/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+.gradle/
+local.properties
+
+# Editors and OS metadata
+.DS_Store
+._*
+.idea/
+.vscode/
+*.swp

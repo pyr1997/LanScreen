@@ -1,0 +1,31 @@
+services:
+  lanscreen:
+    image: lanscreen-local:1.3.2
+    pull_policy: build
+    build:
+      context: ./server
+    init: true
+    network_mode: host
+    labels:
+      com.lanscreen.version: "1.3.2"
+    environment:
+      LANSCREEN_DATA: /data
+      TZ: "${LANSCREEN_TZ:-Asia/Shanghai}"
+      PORT: "${LANSCREEN_PORT:-18765}"
+    volumes:
+      - lanscreen_data:/data
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    pids_limit: 256
+    mem_limit: "${LANSCREEN_MEMORY_LIMIT:-5g}"
+    cpus: "${LANSCREEN_CPU_LIMIT:-2.0}"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+volumes:
+  lanscreen_data:
